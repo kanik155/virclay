@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+.bg-header {
+  background: url(../public/images/start.png) center center no-repeat;
+  background-color: white;
+  background-attachment: fixed;
+  background-size: auto 100%;
+  color: #383838;  
+}
+
+.border-2rem
+{
+  position: relative;
+  z-index: 2;
+  border: 2rem solid;
+}
+
+.border--enter {
+  border-width: 2rem;
+}
+
+.border--exit-active {
+  transition: border-width 0.3s ease-out;
+  border-width: 0;
+}
+
+.border--exit-done {
+  border-width: 0;
+}
+
+@tailwind utilities;
+
+@font-face {
+  font-family: "AlternateGothic3";
+  src: url("/fonts/alternate-gothic-no3-d.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

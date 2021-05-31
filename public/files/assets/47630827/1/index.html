@@ -1,0 +1,47 @@
+<div id="app">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    
+    <nav class="navbar is-fixed-top level m-5" role="navigation">
+        <div class="level-left">
+            <div class="level-item">
+            </div>
+        </div>
+        <div class="level-righ">
+            <div class="level-item">
+                <button class="btn has-tooltip-bottom" id="microphone-btn" data-tooltip="マイクをオフにする"><i class="fa fa-microphone"></i></button>
+                <button class="btn has-tooltip-bottom" id="video-btn" data-tooltip="カメラをオフにする"><i class="fa fa-video"></i></button>
+                <button class="btn has-tooltip-bottom" id="screenshare-btn" data-tooltip="画面シェア"><i class="fa fa-desktop"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar is-fixed-bottom level m-5" role="navigation">
+        <div class="level-left">
+            <div class="level-item">
+                <button class="btn" id="vr-btn" data-tooltip="VRモード"><i class="fa fa-vr-cardboard"></i></button>
+                <button class="btn" id="fpv-btn" data-tooltip="１人称モード"><i class="fa fa-street-view"></i></button>
+                <button class="btn" id="orbit-btn" data-tooltip="モデルビューモード"><i class="fa fa-kaaba"></i></button>
+                <button class="btn" id="play-btn"　data-tooltip="ナビモード"><i class="fa fa-play"></i></button>
+            </div>
+        </div>
+        <div class="level-righ">
+            <div class="level-item">
+                <button class="btn" id="share-btn" data-tooltip="SNSシェア"><i class="fa fa-share-alt"></i></button>
+                <button class="btn modal-button" data-target="modal-help" id="help-btn" @click="showHelp" data-tooltip="使い方"><i class="fa fa-question"></i></button>
+                <button class="btn" id="screenshot-btn" @click="takeScreenshot" data-tooltip="スクリーンショット"><i class="fa fa-camera"></i></button>
+                <button v-if="fullscreen" class="btn" id="exit-fullscreen-btn" @click="exitFullscreen" data-tooltip="全画面解除"><i class="fa fa-compress"></i></button>
+                <button v-else class="btn" id="request-fullscreen-btn" @click="requestFullscreen" data-tooltip="全画面表示"><i class="fa fa-expand"></i></button>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="modal" id="modal-help">
+        <div class="modal-background" @click="closeHelp"></div>
+        <div class="modal-content">
+            <p class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+            </p>
+        </div>
+        <button class="modal-close is-large" @click="closeHelp" aria-label="close"></button>
+    </div>
+</div>
