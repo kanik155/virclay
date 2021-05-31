@@ -1,13 +1,9 @@
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
-    extend: {
-      spacing: {
-        '96': '26rem',
-      }
-    },
+    extend: {},
     fontFamily: {
       'sans': ['AlternateGothic3'],
     }
