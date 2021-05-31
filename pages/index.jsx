@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head'
 import { Transition, CSSTransition } from 'react-transition-group';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon
+} from 'react-share'
 
 const SLIDE_STYLE = {
   entering: {
@@ -110,13 +116,13 @@ export default function Home() {
                   </button>
 
                   <div className="absolute text-sm bottom-0">
-                    <div className="flex flex-row my-6">
-                      <button onClick={() => console.log("TwitterButtonClick")}>
-                        <img src="images/twitter.png" className="mx-2 h-7" />
-                      </button>
-                      <button onClick={() => console.log("FacebookButtonClick")}>
-                        <img src="images/facebook.png" className="mx-2 h-7" />
-                      </button>
+                    <div className="flex flex-row my-6 space-x-2">
+                      <TwitterShareButton url="https://google.com">
+                        <TwitterIcon size="32" round />
+                      </TwitterShareButton>
+                      <FacebookShareButton url="https://google.com">
+                        <FacebookIcon size="32" round />
+                      </FacebookShareButton>
                     </div>
                     <p>
                       Copyright © LASTMILE WORKS Co., Ltd. All rigths reserved.
