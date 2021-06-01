@@ -95,7 +95,7 @@ export default function Home() {
                       このデモはWebGLで作られています
                     </p>
                     <p className="text-sm font-black">
-                      <a>詳細はこちら</a>
+                      <a>詳細はこちら...</a>
                     </p>
                   </div>
 
