@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 .bg-header {
-  background: url(../public/images/start.png) center center no-repeat;
+  background: url(../public/images/start.jpg) center center no-repeat;
   background-color: white;
   background-attachment: fixed;
   background-size: auto 100%;
